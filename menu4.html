@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <style type="text/css">
+
+       #top3{
+            width:100%;
+            height: 275px;
+            float: center;
+            padding:30px; 
+        }
+
+        #yeezyshoes{
+            width:50%;
+            height:375px;
+            float: left;
+            padding:30px;
+
+        }
+
+        #louisvuitton{
+            width:50%;
+            height:375px;
+            float: left;
+            padding:30px;
+            margin-right: 60px;
+            
+
+
+        }
+
+        #yeezusHoodie{
+            width:50%;
+            height:375px;
+            float: left;
+            padding:30px;
+
+
+        }
+        div3{
+            margin-top: -300px;
+        
+        }
+        #payment{
+            text-align: center;
+            font-style: italic;
+            font-size: 15px;
+
+        }
+        #subtotal{
+            font-size:30px;
+            
+        }
+
+
+    </style>
+    
+    <script> 
+        function subtotal(){
+        var q1 = document.getElementById("quantity1");
+        var q2 = document.getElementById("quantity2");
+        var q3 = document.getElementById("quantity3");
+
+        var total = document.getElementById("total");
+        var subtotal = document.getElementById("subtotal");
+        var tax = document.getElementById("tax");
+        var handling = document.getElementById("handling");
+        var line = document.getElementById("line");
+
+        var subtotal_c = (parseFloat(q1.value)*49.99)+(parseFloat(q2.value)*19.99)+(parseFloat(q3.value)*57.99);
+        var tax_c = subtotal_c *0.0875;
+        var shipping = 5.50
+        var amt_total = subtotal_c+tax_c+shipping;
+
+        subtotal.innerHTML = "subtotal: $" + subtotal_c + "\n";
+        tax.innerHTML      = "Tax: $" + tax_c + "\n";
+        handling.innerHTML = "Shipping and Handling: $" + shipping + "\n"
+        line.innerHTML     = "-------------------------------------";
+        total.innerHTML    = "Total: $" + amt_total + "\n";
+
+    }
+         
+        
+
+        
+    </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<nav>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.htm">Home</a></li>
+                        <li><a href="menu2.html">Clothing</a></li>
+                        <li><a href="menu3.html">Shoes</a></li>
+                        <li><a href="menu4.html">Exclusives</a></li>
+                        <li><a href="menu5.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+    </div>
+
+
+    <div1>
+
+         <img id="top3" src="exclusive.png" >
+
+    </div1>
+        <br>
+        <br>
+       
+
+    <div2> 
+       
+        <img id="yeezyshoes" src="yeezyshoes.jpg">
+        <h3> Black and White exclusive<br> 
+             Yezzy Shoes </h3>
+        <br> 
+        <span> Price: $285.99 </span> <br> 
+        <p>  
+        <br> 
+            -great comfort <br> <br>
+            -colors: black and white <br> <br>
+            -Fit: As expected (100%) <br> <br> 
+            -FREE Shipping included!
+        </p> 
+        <br> 
+        <br>  
+        Quantity: <input type="text" id="quantity1">
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    </div2>
+
+    <div3> 
+
+        <img id="louisvuitton" src="louisvuitton.jpg">  
+        <h3> Louis Vuitton Bag </h3>
+        <br>
+        <br> 
+        <span> Price: $357.99 </span> <br> 
+        <p>  
+        <br> 
+            -long lasting <br> <br>
+            -colors: brown and gold <br> <br>
+            -Companies Most Liked <br> <br> 
+            -FREE Shipping included!
+        </p> 
+        Quantity: <input type="text" id="quantity2"> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div3>
+
+    <div4> 
+
+        <img id="yeezusHoodie" src="yeezusHoodie.jpg"> 
+        <h3> Light Brown Yeezus Hoodie</h3>
+        <br> 
+        <span> Price: $59.99 </span> <br> 
+        <p>  
+        <br> 
+            -soft material <br> <br>
+            -colors: light brown and white <br> <br>
+            -Fit: As expected (100%) <br> <br> 
+            -FREE Shipping included! <br> <br> 
+            
+        </p> 
+        Quantity: <input type="text" id="quantity3">
+  
+        <br>
+        <br>
+        <br>    
+        <br>
+
+    </div4>
+
+
+<button onClick="subtotal()"> Place Your Order </button>
+    <br> 
+    <br> 
+    <br>
+    
+    <div id="payment">
+        <div id="subtotal"> </div>
+        <br>
+        <div id="tax"> </div>
+        <br>
+        <div id="handling"> </div>
+        <br>
+        <div id="line"> </div>
+        <br>
+        <div id="total"> </div>
+    </div>
+
+</html> 
+</head>
+
